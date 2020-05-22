@@ -1,0 +1,16 @@
+// clases personalizadas
+.body-font {
+    font-family: var(--body-font);
+}
+.heading-font {
+    font-family: var(--heading-font);
+}
+//header
+.main-nav {
+    background-color: var(--neutral-very-dark-violet);
+}
+.main-menu__link {
+    color: var(--neutral-light-gray);
+    text-transform: uppercase;
+    font-weight: 700;
+}
