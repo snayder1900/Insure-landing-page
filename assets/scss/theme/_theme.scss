@@ -6,11 +6,48 @@
     font-family: var(--heading-font);
 }
 //header
+.header-nav {
+    background-color: white;
+}
 .main-nav {
     background-color: var(--neutral-very-dark-violet);
+
+    @include mq(desktop) {
+        background-color: inherit;
+    }
+}
+.main-menu__item--border {
+    
+
+    @include mq(desktop) {
+    transition: background .25s ease, color .25s ease;
+
+        &:hover {
+            background-color: var(--neutral-very-dark-violet);
+        }
+    }
 }
 .main-menu__link {
     color: var(--neutral-light-gray);
     text-transform: uppercase;
     font-weight: 700;
+
+    @include mq(desktop) {
+        color: var(--neutral-dark-grayish-violet);
+    }
+
+    &:hover {
+        @include mq(desktop) {
+            color: var(--neutral-very-dark-violet);
+        }
+    }
+}
+.main-menu__link--border {
+    @include mq(desktop) {
+        color: var(--neutral-very-dark-violet);
+
+        &:hover {
+            color: var(--neutral-light-gray);
+        }
+    }
 }

@@ -54,7 +54,7 @@ html {
    * Agrega el font-family al body
    */
 body {
-  margin: 0;
+  margin: 65px 0 0 0;
   font-family: var(--body-font); }
 
 /**
@@ -386,17 +386,43 @@ template {
 .heading-font {
   font-family: var(--heading-font); }
 
+.header-nav {
+  background-color: white; }
+
 .main-nav {
   background-color: var(--neutral-very-dark-violet); }
+  @media screen and (min-width: 64em) {
+    .main-nav {
+      background-color: inherit; } }
+
+@media screen and (min-width: 64em) {
+  .main-menu__item--border {
+    transition: background .25s ease, color .25s ease; }
+    .main-menu__item--border:hover {
+      background-color: var(--neutral-very-dark-violet); } }
 
 .main-menu__link {
   color: var(--neutral-light-gray);
   text-transform: uppercase;
   font-weight: 700; }
+  @media screen and (min-width: 64em) {
+    .main-menu__link {
+      color: var(--neutral-dark-grayish-violet); } }
+  @media screen and (min-width: 64em) {
+    .main-menu__link:hover {
+      color: var(--neutral-very-dark-violet); } }
+
+@media screen and (min-width: 64em) {
+  .main-menu__link--border {
+    color: var(--neutral-very-dark-violet); }
+    .main-menu__link--border:hover {
+      color: var(--neutral-light-gray); } }
 
 .header-nav {
   height: 5rem;
-  position: relative;
+  padding: 0 2em 0 2em;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   display: flex;
@@ -409,7 +435,14 @@ template {
   top: 100%;
   left: 0;
   right: 0;
-  padding: 2em 1em; }
+  height: 100vh;
+  padding: 3em 2em; }
+  @media screen and (min-width: 64em) {
+    .main-nav {
+      display: block;
+      position: static;
+      height: auto;
+      padding: 0; } }
 
 .main-menu__checkbox:checked ~ .main-nav {
   display: block; }
@@ -419,23 +452,38 @@ template {
 
 .main-menu {
   padding: 0; }
+  @media screen and (min-width: 64em) {
+    .main-menu {
+      display: flex; } }
   .main-menu__checkbox {
     display: none; }
   .main-menu__open {
     user-select: none;
     cursor: pointer;
-    height: 40px;
-    width: 50px;
+    height: 33px;
+    width: 33px;
     display: inline-flex;
     background: url(../images/icon-hamburger.svg) no-repeat; }
+    @media screen and (min-width: 64em) {
+      .main-menu__open {
+        display: none; } }
   .main-menu__item {
     display: block;
     text-align: center;
-    padding: 1em;
     letter-spacing: 1px; }
     .main-menu__item:nth-child(3) {
       margin-bottom: 1em; }
+      @media screen and (min-width: 64em) {
+        .main-menu__item:nth-child(3) {
+          margin-bottom: 0; } }
     .main-menu__item:nth-child(4) {
       border: 1px solid var(--neutral-light-gray); }
+      @media screen and (min-width: 64em) {
+        .main-menu__item:nth-child(4) {
+          border: 1px solid var(--neutral-very-dark-violet); } }
   .main-menu__link {
-    display: block; }
+    display: block;
+    padding: 1em; }
+    @media screen and (min-width: 64em) {
+      .main-menu__link {
+        padding: .5em 1em; } }
