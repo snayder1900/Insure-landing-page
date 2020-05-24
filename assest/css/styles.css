@@ -380,24 +380,6 @@ template {
 .l-center-content {
   text-align: center; }
 
-.section-insure__title {
-  white-space: pre-wrap;
-  margin-top: 6rem;
-  font-size: 3rem; }
-
-.section-insure__text {
-  margin-bottom: 2rem;
-  font-size: 1.18rem;
-  line-height: 2rem; }
-
-.link-container {
-  display: flex;
-  justify-content: center; }
-  .link-container__link {
-    display: inline-block;
-    padding: .5em 2em;
-    margin-bottom: 6rem; }
-
 .body-font {
   font-family: var(--body-font); }
 
@@ -436,15 +418,8 @@ template {
     .main-menu__link--border:hover {
       color: var(--neutral-light-gray); } }
 
-.main-insure {
+section {
   background-color: var(--primary-dark-violet); }
-
-.section-insure {
-  color: white; }
-
-.link-container__link {
-  color: var(--neutral-light-gray);
-  border: 1px solid var(--neutral-light-gray); }
 
 .header-nav {
   height: 5rem;
